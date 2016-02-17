@@ -19,5 +19,3 @@ namespace Anagrams
     }
   }
 }
-
-// (16,34): DNX,Version=v4.5.1 error CS0029: Cannot implicitly convert type 'bool' to 'System.Collections.Generic.List<string>'

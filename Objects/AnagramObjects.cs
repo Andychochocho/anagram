@@ -21,7 +21,7 @@ namespace Anagrams
     {
       char[] _inputInfo = _userInput1.ToCharArray();
       char[]  _inputInfo2 = _userInput2.ToCharArray();
-      // IEnumerable <char[]> _inputInfoCompared = _inputInfo.Intersect(_inputInfo2);
+      IEnumerable <char> _inputInfoCompared = _inputInfo.Intersect(_inputInfo2);
       Array.Sort(_inputInfo);
       Array.Sort(_inputInfo2);
 
@@ -30,14 +30,14 @@ namespace Anagrams
         return _userInput2 + " is an anagram of " + _userInput1;
       }
 
-      // else if (_inputInfoCompared.SequenceEqual(_inputInfo))
-      // {
+      else if (_inputInfoCompared.SequenceEqual(_inputInfo))
+      {
         // foreach (char[] _inputInfo in _inputInfo2)
         // {
         //   Console.WriteLine("THIS IS WORKING");
         // }
-        // return "True";
-      // }
+        return _userInput1 + " is a part of " + _userInput2;
+      }
       else
       {
         return _userInput1 + " is NOT an anagram of " + _userInput2;
